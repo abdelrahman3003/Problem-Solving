@@ -16,9 +16,9 @@ int main()
                 if (s[i] == '#')
                 {
                     if (i == 3)
-                        cout << i;
+                        cout << i+1;
                     else
-                        cout << i << " ";
+                        cout << i+1 << " ";
                 }
             }
         }
