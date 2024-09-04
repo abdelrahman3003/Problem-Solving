@@ -12,21 +12,24 @@ int main()
         x = sumPrefix = 0;
         for (int i = 0; i < n; i++)
             cin >> arr[i];
-            int max = arr[0];
- 
+        int max = arr[0];
+
         for (int i = 0; i < n; i++)
         {
             if (max < arr[i])
                 max = arr[i];
-            if (arr[0] == 0)
+            if (arr[0] == 0&& i==0)
                 x++;
             else if (i != 0)
             {
                 if (sumPrefix == arr[i])
-                    x++;
-                else if (sumPrefix - max + arr[i] == max && arr[i]!=0)
                 {
-                 
+
+                    x++;
+                }
+                else if (sumPrefix - max + arr[i] == max)
+                {
+
                     x++;
                 }
             }
@@ -34,6 +37,6 @@ int main()
         }
         cout << x << endl;
     }
- 
+
     return 0;
 }
